@@ -1,4 +1,4 @@
-#import "WGSTransformBaidu.h"
+#import "CDVWGSTransformBaidu.h"
 #import <Cordova/CDV.h>
 #include <stdio.h>
 const double a = 6378245.0;
