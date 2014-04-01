@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:rim="http://www.blackberry.com/ns/widgets"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="org.apache.cordova.WGSTransformBaidu"
+    version="0.4">
+    <name>Wechat</name>
+    <description>A cordova plugin, a JS version of Wechat SDK</description>
+    <license>MIT</license>
+    <keywords>cordova,wgsTransformBaidu,share</keywords>
+    <repo>https://github.com/ksgt00016758/cordova-wgsTransformBaidu.git</repo>
+    <issue>https://github.com/ksgt00016758/cordova-wgsTransformBaidu/issues</issue>
+
+    <!-- add this to your config.xml -->
+    <!-- <preference name="WechatAppId" value="YOUR_WECHAT_APP_ID_HERE" /> -->
+
+    <js-module src="www/WGSTransformBaidu.js" name="WGSTransformBaidu">
+        <clobbers target="window.WGSTransformBaidu" />
+    </js-module>
+
+    <!-- ios -->
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="WGSTransformBaidu">
+                <param name="ios-package" value="CDVWGSTransformBaidu"/>
+                <param name="onload" value="true" />
+            </feature>
+        </config-file>
+
+        <header-file src="src/ios/CDVWGSTransformBaidu.h" />
+        <source-file src="src/ios/CDVWGSTransformBaidu.m" />
+    </platform>
+
+</plugin>
